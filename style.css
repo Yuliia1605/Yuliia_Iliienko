@@ -27,6 +27,22 @@ html {
     scroll-padding-top: 90px;
 }
 
+/* Homepage developer illustration */
+
+.hero .photo-frame {
+  height: auto;
+  overflow: visible;
+}
+
+.hero .photo-frame .profile-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
