@@ -1,4 +1,3 @@
-
 /* =========================================
    YULIIA ILIIENKO — PERSONAL PORTFOLIO
    MAIN STYLESHEET
@@ -25,22 +24,6 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
-}
-
-/* Homepage developer illustration */
-
-.hero .photo-frame {
-  height: auto;
-  overflow: visible;
-}
-
-.hero .photo-frame .profile-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  border-radius: 20px;
 }
 
 body {
@@ -187,7 +170,8 @@ p {
     padding-bottom: 4px;
 }
 
-/* Mobile menu button */
+
+/* ===== MOBILE MENU BUTTON ===== */
 
 .menu-toggle {
     display: none;
@@ -294,25 +278,38 @@ p {
 
 
 /* =========================================
-   PROFILE PHOTO
+   HOME — DEVELOPER ILLUSTRATION
+
+   Updated:
+   - No portrait aspect ratio
+   - No image cropping
+   - Correct proportions
 ========================================= */
 
 .photo-frame {
     position: relative;
-    aspect-ratio: 4 / 5;
-    max-width: 390px;
     width: 100%;
-    background: #D6E5E7;
-    border-radius: 16px;
-    overflow: hidden;
+    max-width: 440px;
+    height: auto;
+    aspect-ratio: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border-radius: 20px;
+    overflow: visible;
     box-shadow: 20px 20px 0 rgba(25, 122, 137, 0.13);
 }
 
 .profile-photo {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border-radius: 20px;
 }
+
+/* Kept for compatibility with other pages */
 
 .photo-placeholder {
     display: none;
@@ -693,7 +690,6 @@ p {
     .contact-layout {
         gap: 35px;
     }
-
 }
 
 
@@ -756,7 +752,7 @@ p {
     }
 
     .photo-frame {
-        max-width: 310px;
+        max-width: 330px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -802,7 +798,6 @@ p {
         gap: 6px;
         text-align: center;
     }
-
 }
 
 
@@ -831,7 +826,6 @@ p {
     .timeline-item::before {
         left: -30px;
     }
-
 }
 
 
@@ -855,12 +849,12 @@ button:focus-visible {
     .nav-links a {
         transition: none;
     }
-
 }
 
 
-
-/* ===== PROJECT SCREENSHOT GALLERIES ===== */
+/* =========================================
+   PROJECT SCREENSHOT GALLERIES
+========================================= */
 
 .project-gallery {
     margin-top: 28px;
@@ -898,15 +892,21 @@ button:focus-visible {
     transform: scale(1.04);
 }
 
-/* Tablets */
+
+/* ===== GALLERY — TABLETS ===== */
+
 @media (max-width: 850px) {
+
     .gallery-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-/* Phones */
+
+/* ===== GALLERY — PHONES ===== */
+
 @media (max-width: 550px) {
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }
